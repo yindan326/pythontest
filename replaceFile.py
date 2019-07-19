@@ -53,9 +53,10 @@ def replaceFile(file_name):
 						line = line.replace(src, des, 1)
 						lines[i] = line
 
-	if needreplace == True:
+	if needreplace == True:#不加也可以
 		current_file.seek(0)
 		current_file.truncate()
 		current_file.writelines(lines)
 		current_file.close()
 
+replaceFile("./UIOperationIcon.lua")
